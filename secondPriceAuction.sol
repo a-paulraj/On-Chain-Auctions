@@ -1,10 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract firstPriceAuction {
+contract secondPriceAuction {
     address payable public auctionOwner;
     uint public auctionEndTime;
     uint public highestBid; // should this and below be changed to something not public? idk
+    uint public secondhighestBid;
     address payable public highestBidder;
     bool public hasPaid; // default value is false
 
@@ -23,6 +24,8 @@ contract firstPriceAuction {
         if (msg.value > highestBid) {
             highestBid = msg.value;
             highestBidder = payable(msg.sender);
+        } else if (msg.value > secondhighestBid) {
+            secondhighestBid = msg.value;
         }
     }
 
@@ -31,6 +34,6 @@ contract firstPriceAuction {
         require(msg.sender == highestBidder, "You are not the highest bidder");
         require(!hasPaid, "Payment already made");
         hasPaid = true;
-        payable(msg.sender).transfer(highestBid);
+        payable(msg.sender).transfer(secondhighestBid);
     }
 }

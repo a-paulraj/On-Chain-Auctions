@@ -113,6 +113,19 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "secondhighestBid",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -128,7 +141,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"firstPriceAuction.sol": "Auction"
+			"secondPriceAuction.sol": "secondPriceAuction"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -142,12 +155,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"firstPriceAuction.sol": {
-			"keccak256": "0x025f0174ff874b3ba93a56c6d3f63be7e67c703724515231277c4c95c4648a2f",
+		"secondPriceAuction.sol": {
+			"keccak256": "0x560184360a85381741bdfa4aad1178adfe33f439a25b3ac3200fcadf9f959399",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7467f41c4442caa73dac5c32250e8f38d307a3aaf8c939d9672f40ff295c2a2a",
-				"dweb:/ipfs/QmRHUDykCvSWCSkGhJ9pPREh6hEs9jfsURhnp7ZfipiKkP"
+				"bzz-raw://204222c97421597203e38048cf03fb4a6117ae77f0a97a5e8e199a9c2857adad",
+				"dweb:/ipfs/QmWaecoAoHFkMyUqgvoZXPpevMRyvBHxVydh5UvqSuBQyU"
 			]
 		}
 	},
