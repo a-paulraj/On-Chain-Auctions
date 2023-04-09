@@ -22,6 +22,7 @@ contract secondPriceAuction {
         require(msg.value > 0, "Only Positive Bids Allowed");
         require(!hasBid[msg.sender], "Already Bid");
         if (msg.value > highestBid) {
+            secondhighestBid = highestBid;
             highestBid = msg.value;
             highestBidder = payable(msg.sender);
         } else if (msg.value > secondhighestBid) {
