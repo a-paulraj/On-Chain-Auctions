@@ -17,20 +17,21 @@ contract secondPriceAuction {
         auctionEndTime = block.timestamp + biddingTime;
     }
 
-    function bid() public payable {
+    function bid(uint thebid) public {
         require(block.timestamp <= auctionEndTime, "Auction has ended");
-        require(msg.value > 0, "Only Positive Bids Allowed");
+        require(thebid > 0, "Only Positive Bids Allowed");
         require(!hasBid[msg.sender], "Already Bid");
-        if (msg.value > highestBid) {
+        hasBid(msg.sender) = true;
+        if (thebid > highestBid) {
             secondhighestBid = highestBid;
-            highestBid = msg.value;
+            highestBid = thebid;
             highestBidder = payable(msg.sender);
-        } else if (msg.value > secondhighestBid) {
-            secondhighestBid = msg.value;
+        } else if (thebid > secondhighestBid) {
+            secondhighestBid = thebid;
         }
     }
 
-    function pay() public {
+    function pay() public payable {
         require(block.timestamp >= auctionEndTime, "Auction has not ended yet");
         require(msg.sender == highestBidder, "You are not the highest bidder");
         require(!hasPaid, "Payment already made");

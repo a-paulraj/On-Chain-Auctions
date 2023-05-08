@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+
+
+
 contract firstPriceAuction {
     address payable public auctionOwner;
     uint public auctionEndTime;
@@ -21,7 +24,6 @@ contract firstPriceAuction {
         auctionEndTime = block.timestamp + biddingTime;
         nft = IERC721(thenft);
         nftId = thenftid;
-        nft.approve(address(this), nftId);
     }
 
     function bid(uint thebid) public {
