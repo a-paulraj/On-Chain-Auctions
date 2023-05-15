@@ -11,6 +11,16 @@
 						"internalType": "uint256",
 						"name": "biddingTime",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "thenft",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "thenftid",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -79,9 +89,9 @@
 				"name": "highestBid",
 				"outputs": [
 					{
-						"internalType": "bytes32",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bytes32"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -102,9 +112,35 @@
 			},
 			{
 				"inputs": [],
+				"name": "nft",
+				"outputs": [
+					{
+						"internalType": "contract IERC721",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nftId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "pay",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -161,12 +197,28 @@
 		"remappings": []
 	},
 	"sources": {
-		"SealedBidAuction.sol": {
-			"keccak256": "0x4a8c229ece2c3a7a1a6c7d2ec42633d6cdb5c9544a727f7c8e209c4470780c1d",
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e60a33109b0dd4bb07040ab2681522708d9cd5ac2f31d39f91bdeb647bb86780",
-				"dweb:/ipfs/QmPYgxJuGvu2u213Tj3zg6RY5JJLpUQrwnTSgbda3Lwny9"
+				"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+				"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"SealedBidAuction.sol": {
+			"keccak256": "0xb36e9b39a618d17967dc9a6d5839449ef3f29876c7f6291e5548d02e8e939b09",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://111f74ba73b52cd5f30282d659e91676cf3426229644bd1a26b939cd2c45fabd",
+				"dweb:/ipfs/QmVBP3DYM887ttVUwQ9rTPkyz7JY2bqdrkPijBMz3kbJi9"
 			]
 		}
 	},

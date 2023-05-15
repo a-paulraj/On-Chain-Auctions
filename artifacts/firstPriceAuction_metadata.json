@@ -201,11 +201,11 @@
 			]
 		},
 		"firstPriceAuction.sol": {
-			"keccak256": "0x6ce96ce38680098779e634b0c8912374188cc57221fefd13f848ccaa07e7d832",
+			"keccak256": "0xbd2e96f366b32c114e856edbca99539caaed85202886330de1b13ca5a8ad2fe0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e7b95f5fb0bef162aa50afcb365a4bf11fa26b11fae55c7653fe941f9edee158",
-				"dweb:/ipfs/QmUMwPWUghyuLPJasUBTs5c7HPvSCKuH7nfdjxuZnRgrxq"
+				"bzz-raw://0aa538c071f280583a9b87e3e3713b64b37f16a7272fe85958efa7129447b93f",
+				"dweb:/ipfs/QmTQoiYskTXh3AkQhHqHiYn7TZBMoVvTV6MKmdhrK3Fpwg"
 			]
 		}
 	},

@@ -11,6 +11,16 @@
 						"internalType": "uint256",
 						"name": "biddingTime",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "thenft",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "thenftid",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -43,10 +53,16 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "thebid",
+						"type": "uint256"
+					}
+				],
 				"name": "bid",
 				"outputs": [],
-				"stateMutability": "payable",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -109,9 +125,35 @@
 			},
 			{
 				"inputs": [],
+				"name": "nft",
+				"outputs": [
+					{
+						"internalType": "contract IERC721",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nftId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "pay",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -155,12 +197,28 @@
 		"remappings": []
 	},
 	"sources": {
-		"secondPriceAuction.sol": {
-			"keccak256": "0x3ac769ba878ed5a1cbaac8581d9efe13489f4c40398c0050a403a36e592e4ae3",
+		"@openzeppelin/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c235f305565e27af2f3772b83dcf01c924569277acea86e47537ec1656f02b1c",
-				"dweb:/ipfs/QmaPUPBF4BzuRpTFnf4zocMUvViTLuXB1tsbYn8jDXFAwJ"
+				"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+				"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+			]
+		},
+		"@openzeppelin/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"secondPriceAuction.sol": {
+			"keccak256": "0x89c6b9ce26b8d5bd3843e995c2384c486d3a5136e072ad1c5279980d67c4a0f9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://943c4ca68426d35bed38e938f83d30e4c4823ab4bab127d7cb7f78325001c713",
+				"dweb:/ipfs/QmUwbFC2Ngn9gPz6UTiPmCxzrR5AQhQwAoRXbezXivN3Hk"
 			]
 		}
 	},
